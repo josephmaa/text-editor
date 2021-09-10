@@ -5,7 +5,7 @@ Author:  Joseph Maa
 """
 # NOTE:  You'll probably want to start with insertAfter
 
-from node2way import Node2Way
+from .node2way import Node2Way
 
 
 class CursorBasedList(object):
@@ -127,8 +127,8 @@ class CursorBasedList(object):
         next = self._current.getNext()
         prev.setNext(next)
         next.setPrevious(prev)
-        if self.hasPrevious():
-            self._current = prev
+        if self.hasNext():
+            self._current = next
         else:
             self._current = self._trailer.getPrevious()
         self._size -= 1

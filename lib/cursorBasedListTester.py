@@ -4,7 +4,7 @@ File: cursorBasedListTester.py
 Menu-driven tester for Cursor-Based List implementation
 """
 
-from cursor_based_list import CursorBasedList
+from .cursor_based_list import CursorBasedList
 
 
 def testList():
@@ -60,4 +60,5 @@ def testList():
             print("Invalid Menu Choice!")
 
 
-testList()
+if __name__ == "__main__":
+    testList()
